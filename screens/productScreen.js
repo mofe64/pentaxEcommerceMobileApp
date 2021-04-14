@@ -31,6 +31,7 @@ const ProductScreen = () => {
                     <Image source={require('../assets/watch.png')}
                         style={styles.categoryImage}
                         resizeMode='contain'
+                        
                     />
                     <Text>Watches</Text>
                 </TouchableOpacity>
