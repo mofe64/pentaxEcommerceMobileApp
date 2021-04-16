@@ -1,7 +1,8 @@
 import React from 'react';
 import { View,Text, StyleSheet, TouchableOpacity , Image} from 'react-native';
 import ModalDropdown from 'react-native-modal-dropdown';
-import {Ionicons} from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
+import ProductCard from '../components/productCard';
 
 const ProductScreen = () => {
     return (
@@ -43,6 +44,10 @@ const ProductScreen = () => {
                     <Text>Bags</Text>
                 </TouchableOpacity>
             </View>
+            <View style={styles.productsCardContainer}>
+                <ProductCard />
+                <ProductCard />
+            </View>
         </View>
     )
 }
@@ -59,6 +64,7 @@ const styles = StyleSheet.create({
     productsHeader: {
         justifyContent: 'space-between',
         flexDirection: 'row',
+        alignItems:'center',
         marginBottom: 20
 
     },
@@ -86,26 +92,29 @@ const styles = StyleSheet.create({
         borderRadius: 25,
         width: '30%',
         paddingHorizontal: 5,
-        paddingVertical: 10,
+        paddingVertical: 5,
         shadowColor: "#000",
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-around',
         shadowOffset: {
             width: 0,
-            height: 3,
+            height: 2,
         },
         shadowOpacity: 0.29,
         shadowRadius: 4.65,
-        elevation: 7,
+        elevation: 5,
     },
     categoryImage: {
         width: 30,
         height: 30,
         marginRight: 10
-    }
-    
-
+    },
+    productsCardContainer: {
+        marginTop: 20,
+        // flexDirection: 'row',
+        // justifyContent: 'space-between',
+    },
 })
 
 export default ProductScreen;
